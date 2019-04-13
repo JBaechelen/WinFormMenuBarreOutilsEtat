@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{32CD70E7-614A-4924-A34E-00D735A9F85F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WinFormMenuBarreOutilsEtat</RootNamespace>
+    <AssemblyName>WinFormMenuBarreOutilsEtat</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Identification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Identification.Designer.cs">
+      <DependentUpon>Identification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Saisie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Saisie.Designer.cs">
+      <DependentUpon>Saisie.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Identification.resx">
+      <DependentUpon>Identification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Saisie.resx">
+      <DependentUpon>Saisie.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CheckBoxBoutonRadio\CheckBoxBoutonRadio\CheckBoxBoutonRadio.csproj">
+      <Project>{a0aaf38d-8d7b-4255-b559-0eefc66810c6}</Project>
+      <Name>CheckBoxBoutonRadio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WindowsListBox\WindowsListBox\WindowsListBox.csproj">
+      <Project>{99623e6b-80e6-43a0-87c8-77c52d4c6a86}</Project>
+      <Name>WindowsListBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinFormAdditioneur\WinFormAdditioneur\WinFormAdditioneur.csproj">
+      <Project>{f71efffe-6ae8-471f-b3eb-d7f22efe5f13}</Project>
+      <Name>WinFormAdditioneur</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinFormControleSaisie\WinFormControleSaisie\WinFormControleSaisie.csproj">
+      <Project>{ddc41cc0-fa11-4277-9379-9cd4323c2caf}</Project>
+      <Name>WinFormControleSaisie</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinFormDefilement\WinFormDefilement\WinFormDefilement.csproj">
+      <Project>{6120346b-33cf-4e5d-b82f-256a4e53240a}</Project>
+      <Name>WinFormDefilement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinFormListBoxComboBox\WinFormListBoxComboBox\WinFormListBoxComboBox.csproj">
+      <Project>{c8a59d49-c9b0-486f-b12b-58fb15bf4722}</Project>
+      <Name>WinFormListBoxComboBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinFormSynthese\WinFormSynthese\WinFormSynthese.csproj">
+      <Project>{17d2d090-f71b-457e-ad1a-10a3f09f701f}</Project>
+      <Name>WinFormSynthese</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
